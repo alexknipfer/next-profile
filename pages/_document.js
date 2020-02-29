@@ -11,6 +11,10 @@ class MyDocument extends Document {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap"
+            rel="stylesheet"
+          />
           <style jsx global>
             {`
               html,
@@ -19,6 +23,8 @@ class MyDocument extends Document {
               div#__next {
                 height: 100%;
                 width: 100%;
+                font-family: 'Ubuntu';
+                font-weight: 400;
               }
               *,
               *:after,

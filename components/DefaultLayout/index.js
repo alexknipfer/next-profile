@@ -22,9 +22,7 @@ const DefaultLayout = ({ children }) => {
         Experience
       </div>
       <div className={`contact-link ${linkClasses.join(' ')}`}>Contact</div>
-      <div className="h-full p-20">
-        <div>{children}</div>
-      </div>
+      <div className="h-full p-20">{children}</div>
 
       <style jsx>{`
         .link {

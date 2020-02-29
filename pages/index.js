@@ -1,9 +1,10 @@
 import DefaultLayout from '../components/DefaultLayout';
+import Welcome from '../components/Welcome';
 
 const Home = () => {
   return (
     <DefaultLayout>
-      <h3>Testing content</h3>
+      <Welcome />
     </DefaultLayout>
   );
 };
