@@ -30,7 +30,7 @@ const DefaultLayout = ({ children }) => {
       </div>
       <div className={`contact-link ${linkClasses.join(' ')}`}>Contact</div>
       <div
-        className="z-20 absolute t-0 l-0 mt-4 ml-4"
+        className="z-20 absolute t-0 l-0 mt-4 ml-4 md:hidden"
         onClick={() => setMenuVisible(!isMenuVisible)}
       >
         <MenuIcon isOpen={isMenuVisible} />
