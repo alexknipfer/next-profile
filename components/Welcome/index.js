@@ -75,7 +75,7 @@ const Welcome = () => {
           </animated.div>
         ))}
       </div>
-      <div className="w-full md:w-2/6">
+      <div className="w-64 md:w-2/6">
         <animated.img
           src="/static/images/profile_pic.png"
           alt="profile pic"
