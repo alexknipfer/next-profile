@@ -1,10 +1,12 @@
 import { NextPage } from 'next';
 
 const linkClasses = [
+  'hidden',
   'hover:text-white',
   'hover:bg-primaryGray',
   'link',
   'cursor-pointer',
+  'md:flex',
 ];
 
 const DefaultLayout: NextPage = ({ children }) => {
@@ -16,11 +18,12 @@ const DefaultLayout: NextPage = ({ children }) => {
         Experience
       </div>
       <div className={`contact-link ${linkClasses.join(' ')}`}>Contact</div>
-      <div>{children}</div>
+      <div className="h-full p-20">
+        <div>{children}</div>
+      </div>
 
       <style jsx>{`
         .link {
-          display: flex;
           align-items: center;
           height: 55px;
           border: 1px solid #443a3a;
@@ -32,7 +35,6 @@ const DefaultLayout: NextPage = ({ children }) => {
         }
 
         .home-link {
-          display: block;
           position: absolute;
           top: 15px;
           left: 50%;
@@ -40,7 +42,6 @@ const DefaultLayout: NextPage = ({ children }) => {
         }
 
         .project-link {
-          display: block;
           position: absolute;
           bottom: 15px;
           left: 50%;
@@ -48,17 +49,15 @@ const DefaultLayout: NextPage = ({ children }) => {
         }
 
         .experience-link {
-          display: block;
           position: absolute;
-          left: -93px;
+          left: -96px;
           top: 40%;
           transform: rotate(90deg);
         }
 
         .contact-link {
-          display: block;
           position: absolute;
-          right: -60px;
+          right: -64px;
           top: 40%;
           transform: rotate(270deg);
         }
