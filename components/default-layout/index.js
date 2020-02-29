@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 import Menu from './menu';
 import MenuIcon from './menu-icon';
@@ -23,12 +24,18 @@ const DefaultLayout = ({ children }) => {
 
   return (
     <div className="h-full relative">
-      <div className={`home-link ${linkClasses.join(' ')}`}>Home</div>
-      <div className={`project-link ${linkClasses.join(' ')}`}>Projects</div>
-      <div className={`experience-link ${linkClasses.join(' ')}`}>
-        Experience
-      </div>
-      <div className={`contact-link ${linkClasses.join(' ')}`}>Contact</div>
+      <Link href="/">
+        <a className={`home-link ${linkClasses.join(' ')}`}>Home</a>
+      </Link>
+      <Link href="/projects">
+        <a className={`project-link ${linkClasses.join(' ')}`}>Projects</a>
+      </Link>
+      <Link href="/experience">
+        <a className={`experience-link ${linkClasses.join(' ')}`}>Experience</a>
+      </Link>
+      <Link href="/contact">
+        <a className={`contact-link ${linkClasses.join(' ')}`}>Contact</a>
+      </Link>
       <div
         className="z-20 absolute t-0 l-0 mt-4 ml-4 md:hidden"
         onClick={() => setMenuVisible(!isMenuVisible)}
