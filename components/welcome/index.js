@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTrail, animated, SpringConfig, useSpring } from 'react-spring';
 
 const welcomeTextItems = ['Welcome', 'to', 'the', 'portfolio', 'of'];

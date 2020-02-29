@@ -1,3 +1,8 @@
+import { useState } from 'react';
+
+import Menu from './menu';
+import MenuIcon from './menu-icon';
+
 const linkClasses = [
   'hidden',
   'hover:text-white',
@@ -14,6 +19,8 @@ const linkClasses = [
 ];
 
 const DefaultLayout = ({ children }) => {
+  const [isMenuVisible, setMenuVisible] = useState(false);
+
   return (
     <div className="h-full relative">
       <div className={`home-link ${linkClasses.join(' ')}`}>Home</div>
@@ -22,6 +29,13 @@ const DefaultLayout = ({ children }) => {
         Experience
       </div>
       <div className={`contact-link ${linkClasses.join(' ')}`}>Contact</div>
+      <div
+        className="z-20 absolute t-0 l-0 mt-4 ml-4 md:hidden"
+        onClick={() => setMenuVisible(!isMenuVisible)}
+      >
+        <MenuIcon isOpen={isMenuVisible} />
+      </div>
+      <Menu isOpen={isMenuVisible} />
       <div className="h-full p-20">{children}</div>
 
       <style jsx>{`
