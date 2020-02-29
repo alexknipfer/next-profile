@@ -15,27 +15,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap"
             rel="stylesheet"
           />
-          <style jsx global>
-            {`
-              html,
-              body,
-              body > div:first-child,
-              div#__next {
-                height: 100%;
-                width: 100%;
-                font-family: 'Ubuntu';
-                font-weight: 400;
-              }
-              *,
-              *:after,
-              *:before {
-                box-sizing: border-box;
-              }
-              body {
-                margin: 0;
-              }
-            `}
-          </style>
         </Head>
         <body>
           <Main />
