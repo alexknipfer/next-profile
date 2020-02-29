@@ -1,8 +1,6 @@
-import { NextPage } from 'next';
-
 import DefaultLayout from '../components/DefaultLayout';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <DefaultLayout>
       <h3>Testing content</h3>

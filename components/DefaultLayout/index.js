@@ -1,5 +1,3 @@
-import { NextPage } from 'next';
-
 const linkClasses = [
   'hidden',
   'hover:text-white',
@@ -15,7 +13,7 @@ const linkClasses = [
   'items-center',
 ];
 
-const DefaultLayout: NextPage = ({ children }) => {
+const DefaultLayout = ({ children }) => {
   return (
     <div className="h-full relative">
       <div className={`home-link ${linkClasses.join(' ')}`}>Home</div>
