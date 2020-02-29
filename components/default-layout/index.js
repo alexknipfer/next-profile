@@ -37,7 +37,6 @@ const DefaultLayout = ({ children }) => {
       </div>
       <Menu isOpen={isMenuVisible} />
       <div className="h-full p-20">{children}</div>
-
       <style jsx>{`
         .link {
           border: 1px solid #443a3a;
@@ -72,6 +71,27 @@ const DefaultLayout = ({ children }) => {
           transform: rotate(270deg);
         }
       `}</style>
+      <style jsx global>
+        {`
+          html,
+          body,
+          body > div:first-child,
+          div#__next {
+            height: 100%;
+            width: 100%;
+            font-family: 'Ubuntu';
+            font-weight: 400;
+          }
+          *,
+          *:after,
+          *:before {
+            box-sizing: border-box;
+          }
+          body {
+            margin: 0;
+          }
+        `}
+      </style>
     </div>
   );
 };
