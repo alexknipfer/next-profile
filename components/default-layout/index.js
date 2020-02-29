@@ -9,7 +9,6 @@ const linkClasses = [
   'hover:text-white',
   'hover:bg-primaryGray',
   'link',
-  'cursor-pointer',
   'md:flex',
   'text-4xl',
   'px-4',
