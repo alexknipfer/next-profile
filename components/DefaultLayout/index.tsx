@@ -7,6 +7,12 @@ const linkClasses = [
   'link',
   'cursor-pointer',
   'md:flex',
+  'text-4xl',
+  'px-4',
+  'uppercase',
+  'no-underline',
+  'h-55',
+  'items-center',
 ];
 
 const DefaultLayout: NextPage = ({ children }) => {
@@ -24,14 +30,8 @@ const DefaultLayout: NextPage = ({ children }) => {
 
       <style jsx>{`
         .link {
-          align-items: center;
-          height: 55px;
           border: 1px solid #443a3a;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-size: 32px;
           letter-spacing: 0.2em;
-          padding: 0 19px;
         }
 
         .home-link {
