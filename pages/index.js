@@ -1,5 +1,5 @@
-import DefaultLayout from '../components/DefaultLayout';
-import Welcome from '../components/Welcome';
+import DefaultLayout from '../components/default-layout';
+import Welcome from '../components/welcome';
 
 const Home = () => {
   return (
