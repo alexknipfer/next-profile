@@ -1,39 +1,61 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import Menu from './menu';
 import MenuIcon from './menu-icon';
 
-const linkClasses = [
-  'hidden',
-  'hover:text-white',
-  'hover:bg-primaryGray',
-  'link',
-  'md:flex',
-  'text-4xl',
-  'px-4',
-  'uppercase',
-  'no-underline',
-  'h-55',
-  'items-center',
-];
-
 const DefaultLayout = ({ children }) => {
+  const { pathname } = useRouter();
   const [isMenuVisible, setMenuVisible] = useState(false);
+
+  const linkClasses = [
+    'hidden',
+    'hover:text-white',
+    'hover:bg-primaryGray',
+    'link',
+    'md:flex',
+    'text-4xl',
+    'px-4',
+    'uppercase',
+    'no-underline',
+    'h-55',
+    'items-center',
+  ];
 
   return (
     <div className="h-full relative">
       <Link href="/">
-        <a className={`home-link ${linkClasses.join(' ')}`}>Home</a>
+        <a
+          className={`home-link ${linkClasses.join(' ')} ${pathname === '/' &&
+            'bg-primaryGray text-white'}`}
+        >
+          Home
+        </a>
       </Link>
       <Link href="/projects">
-        <a className={`project-link ${linkClasses.join(' ')}`}>Projects</a>
+        <a
+          className={`project-link ${linkClasses.join(' ')} ${pathname ===
+            '/projects' && 'bg-primaryGray text-white'}`}
+        >
+          Projects
+        </a>
       </Link>
       <Link href="/experience">
-        <a className={`experience-link ${linkClasses.join(' ')}`}>Experience</a>
+        <a
+          className={`experience-link ${linkClasses.join(' ')} ${pathname ===
+            '/experience' && 'bg-primaryGray text-white'}`}
+        >
+          Experience
+        </a>
       </Link>
       <Link href="/contact">
-        <a className={`contact-link ${linkClasses.join(' ')}`}>Contact</a>
+        <a
+          className={`contact-link ${linkClasses.join(' ')} ${pathname ===
+            '/contact' && 'bg-primaryGray text-white'}`}
+        >
+          Contact
+        </a>
       </Link>
       <div
         className="z-20 absolute t-0 l-0 mt-4 ml-4 md:hidden"
