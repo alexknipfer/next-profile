@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useTrail, animated } from 'react-spring';
 
 import Overlay from '../overlay';
@@ -37,9 +38,11 @@ const Menu = ({ isOpen }) => {
             key={navItems[index].path}
             style={{ marginBottom: 27, ...props }}
           >
-            <div className="text-3xl text-black uppercase border-l border-solid border-black pl-4">
-              {navItems[index].text}
-            </div>
+            <Link href={navItems[index].path}>
+              <a className="text-3xl text-black uppercase border-l border-solid border-black pl-4">
+                {navItems[index].text}
+              </a>
+            </Link>
           </animated.div>
         ))}
       </div>
