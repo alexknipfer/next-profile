@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 
 import Menu from './menu';
 import MenuIcon from './menu-icon';
+import GlobalStyle from '../global-style';
 
 const DefaultLayout = ({ children }) => {
   const { pathname } = useRouter();
@@ -15,7 +16,7 @@ const DefaultLayout = ({ children }) => {
     'hover:bg-primaryGray',
     'link',
     'md:flex',
-    'text-4xl',
+    'text-2xl',
     'px-4',
     'uppercase',
     'no-underline',
@@ -64,7 +65,7 @@ const DefaultLayout = ({ children }) => {
         <MenuIcon isOpen={isMenuVisible} />
       </div>
       <Menu isOpen={isMenuVisible} />
-      <div className="h-full p-20">{children}</div>
+      <div className="h-full p-8 md:p-20">{children}</div>
       <style jsx>{`
         .link {
           border: 1px solid #443a3a;
@@ -99,27 +100,7 @@ const DefaultLayout = ({ children }) => {
           transform: rotate(270deg);
         }
       `}</style>
-      <style jsx global>
-        {`
-          html,
-          body,
-          body > div:first-child,
-          div#__next {
-            height: 100%;
-            width: 100%;
-            font-family: 'Ubuntu';
-            font-weight: 400;
-          }
-          *,
-          *:after,
-          *:before {
-            box-sizing: border-box;
-          }
-          body {
-            margin: 0;
-          }
-        `}
-      </style>
+      <GlobalStyle />
     </div>
   );
 };
