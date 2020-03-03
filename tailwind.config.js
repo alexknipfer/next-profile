@@ -3,6 +3,7 @@ module.exports = {
     textColor: theme => ({
       ...theme('colors'),
       primaryGray: '#443a3a',
+      lightGray: '#999999',
     }),
     backgroundColor: theme => ({
       ...theme('colors'),

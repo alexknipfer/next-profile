@@ -62,7 +62,7 @@ const Welcome = () => {
         {welcomeTextTrail.map(({ x, height, ...rest }, index) => (
           <animated.div
             key={index}
-            className="text-right pr-8 text-3xl leading-8 text-black uppercase"
+            className="text-right pr-8 text-xl leading-8 text-black uppercase"
             style={{
               ...rest,
               transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
@@ -81,7 +81,7 @@ const Welcome = () => {
           style={imageProps}
         />
       </div>
-      <div className="md:my-64 md:pl-8">
+      <div className="mt-6 md:pl-8 md:mb-0">
         {aboutMeTextTrail.map(({ x, ...rest }, index) => {
           const currentItem = aboutMeTextItems[index];
 
@@ -94,17 +94,17 @@ const Welcome = () => {
               }}
             >
               {currentItem.type === 'firstName' && (
-                <div className="uppercase text-black text-3xl">
+                <div className="uppercase text-black text-xl">
                   {currentItem.text}
                 </div>
               )}
               {currentItem.type === 'lastName' && (
-                <div className="uppercase text-white text-3xl bg-primaryGray px-3 mb-5">
+                <div className="uppercase text-white text-xl bg-primaryGray px-3 mb-3">
                   {currentItem.text}
                 </div>
               )}
               {currentItem.type === 'jobTitle' && (
-                <div className="font-bold text-black text-xl">
+                <div className="font-bold text-black text-base">
                   {currentItem.text}
                 </div>
               )}
