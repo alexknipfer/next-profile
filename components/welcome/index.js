@@ -81,7 +81,7 @@ const Welcome = () => {
           style={imageProps}
         />
       </div>
-      <div className="mt-6 md:pl-8 md:mb-0">
+      <div className="border-l border-solid border-black pl-3 mt-6 md:pl-8 md:mb-0 md:border-none">
         {aboutMeTextTrail.map(({ x, ...rest }, index) => {
           const currentItem = aboutMeTextItems[index];
 
