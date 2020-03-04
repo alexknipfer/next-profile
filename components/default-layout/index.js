@@ -13,7 +13,7 @@ const DefaultLayout = ({ children }) => {
   const linkClasses = [
     'hidden',
     'hover:text-white',
-    'hover:bg-primaryGray',
+    'hover:bg-background-text',
     'link',
     'md:flex',
     'text-2xl',
@@ -25,11 +25,11 @@ const DefaultLayout = ({ children }) => {
   ];
 
   return (
-    <div className="h-full relative">
+    <div className="h-full relative theme-light bg-background-primary">
       <Link href="/">
         <a
           className={`home-link ${linkClasses.join(' ')} ${pathname === '/' &&
-            'bg-primaryGray text-white'}`}
+            'bg-background-text text-white'}`}
         >
           Home
         </a>
@@ -37,7 +37,7 @@ const DefaultLayout = ({ children }) => {
       <Link href="/projects">
         <a
           className={`project-link ${linkClasses.join(' ')} ${pathname ===
-            '/projects' && 'bg-primaryGray text-white'}`}
+            '/projects' && 'bg-background-text text-white'}`}
         >
           Projects
         </a>
@@ -45,7 +45,7 @@ const DefaultLayout = ({ children }) => {
       <Link href="/experience">
         <a
           className={`experience-link ${linkClasses.join(' ')} ${pathname ===
-            '/experience' && 'bg-primaryGray text-white'}`}
+            '/experience' && 'bg-background-text text-white'}`}
         >
           Experience
         </a>
@@ -53,7 +53,7 @@ const DefaultLayout = ({ children }) => {
       <Link href="/contact">
         <a
           className={`contact-link ${linkClasses.join(' ')} ${pathname ===
-            '/contact' && 'bg-primaryGray text-white'}`}
+            '/contact' && 'bg-background-text text-white'}`}
         >
           Contact
         </a>
