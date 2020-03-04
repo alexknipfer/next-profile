@@ -48,7 +48,7 @@ const Contact = () => {
       <div className="flex flex-col justify-center items-center h-full">
         <div className="grid grid-cols-1 col-auto">
           {trail.map(({ x, ...rest }, index) => (
-            <div className="transform hover:scale-110 transition duration-500 ease-in-out">
+            <div className="lg:transform lg:hover:scale-110 lg:transition lg:duration-500 lg:ease-in-out">
               <animated.a
                 key={index}
                 className="flex items-center mb-6"
