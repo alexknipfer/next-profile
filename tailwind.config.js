@@ -1,14 +1,16 @@
 module.exports = {
   theme: {
-    textColor: theme => ({
-      ...theme('colors'),
-      primaryGray: '#443a3a',
-      lightGray: '#999999',
-    }),
-    backgroundColor: theme => ({
-      ...theme('colors'),
-      primaryGray: '#443a3a',
-      overlayGray: 'rgba(255, 255, 255, 0.95)',
-    }),
+    extend: {
+      colors: {
+        background: {
+          primary: 'var(--bg-background-primary)',
+          text: 'var(--bg-background-text)',
+          overlay: 'var(--bg-background-overlay)',
+        },
+        copy: {
+          headerLight: 'var(--text-copy-header-light)',
+        },
+      },
+    },
   },
 };
