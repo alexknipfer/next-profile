@@ -1,6 +1,7 @@
 import { useTrail, animated } from 'react-spring';
 
 import DefaultLayout from '../../components/default-layout';
+import Meta from '../../components/meta';
 
 const contactMethods = [
   {
@@ -45,6 +46,11 @@ const Contact = () => {
 
   return (
     <DefaultLayout>
+      <Meta
+        title="Contact | Alex Knipfer"
+        description="Contact Alex Knipfer on multiple socials networks"
+        url="https://alexknipfer.com/contact"
+      />
       <div className="flex flex-col justify-center items-center h-full">
         <div className="grid grid-cols-1 col-auto">
           {trail.map(({ x, ...rest }, index) => (
