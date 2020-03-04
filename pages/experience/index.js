@@ -4,6 +4,7 @@ import DefaultLayout from '../../components/default-layout';
 import Careers from '../../components/experience/careers';
 import Education from '../../components/experience/education';
 import Technologies from '../../components/experience/technologies';
+import Meta from '../../components/meta';
 
 const config = {
   mass: 5,
@@ -23,6 +24,11 @@ const Experience = () => {
 
   return (
     <DefaultLayout>
+      <Meta
+        title="Experience | Alex Knipfer"
+        description="Alex Knipfer's technical experience"
+        url="https://alexknipfer.com/experience"
+      />
       <div className="flex justify-center items-center h-full">
         <div className="grid grid-cols-1 col-auto">
           {componentTrail.map(({ x, ...rest }, index) => (
