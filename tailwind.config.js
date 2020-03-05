@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      fontSize: {
+        tiny: '0.6rem',
+      },
       colors: {
         background: {
           primary: 'var(--bg-background-primary)',
