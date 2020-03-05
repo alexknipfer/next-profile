@@ -99,7 +99,7 @@ const Welcome = () => {
                 </div>
               )}
               {currentItem.type === 'lastName' && (
-                <div className="uppercase text-white text-xl bg-primaryGray px-3 mb-3">
+                <div className="uppercase text-white text-xl bg-background-text px-3 mb-3">
                   {currentItem.text}
                 </div>
               )}

@@ -8,7 +8,7 @@ const Overlay = ({ children, isVisible }) => {
     <Fragment>
       {isVisible && (
         <div
-          className="absolute w-full h-full top-0 left-0 z-10 bg-overlayGray"
+          className="absolute w-full h-full top-0 left-0 z-10 bg-background-overlay"
           style={animationStyle}
         >
           {children}
