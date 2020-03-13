@@ -27,7 +27,7 @@ const projects = [
 const Projects = () => {
   return (
     <DefaultLayout>
-      <div className="flex justify-center items-start md:items-center h-full pb-20 md:pb-0">
+      <div className="flex justify-center items-start md:items-center h-full">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 mb-20 md:mb-0">
           {projects.map((p, i) => (
             <Card name={p.name} link={p.link} img={p.img} key={i} />
