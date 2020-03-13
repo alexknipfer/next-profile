@@ -59,13 +59,13 @@ const DefaultLayout = ({ children }) => {
         </a>
       </Link>
       <div
-        className="z-20 absolute t-0 l-0 mt-4 ml-4 md:hidden"
+        className="z-20 fixed t-0 l-0 mt-4 ml-4 md:hidden"
         onClick={() => setMenuVisible(!isMenuVisible)}
       >
         <MenuIcon isOpen={isMenuVisible} />
       </div>
       <Menu isOpen={isMenuVisible} />
-      <div className="h-full p-8 md:p-20">{children}</div>
+      <div className="h-full">{children}</div>
       <style jsx>{`
         .link {
           border: 1px solid #443a3a;
