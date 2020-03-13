@@ -65,7 +65,7 @@ const DefaultLayout = ({ children }) => {
         <MenuIcon isOpen={isMenuVisible} />
       </div>
       <Menu isOpen={isMenuVisible} />
-      <div className="h-full pt-20 md:pt-0">{children}</div>
+      <div className="h-full">{children}</div>
       <style jsx>{`
         .link {
           border: 1px solid #443a3a;
