@@ -29,7 +29,7 @@ const Experience = () => {
         description="Alex Knipfer's technical experience"
         url="https://alexknipfer.com/experience"
       />
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-center items-center h-full p-8 md:p-20">
         <div className="grid grid-cols-1 col-auto">
           {componentTrail.map(({ x, ...rest }, index) => (
             <animated.div

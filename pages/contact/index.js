@@ -51,7 +51,7 @@ const Contact = () => {
         description="Contact Alex Knipfer on multiple socials networks"
         url="https://alexknipfer.com/contact"
       />
-      <div className="flex flex-col justify-center items-center h-full">
+      <div className="flex flex-col justify-center items-center h-full p-8 md:p-20">
         <div className="grid grid-cols-1 col-auto">
           {trail.map(({ x, ...rest }, index) => (
             <div className="lg:transform lg:hover:scale-110 lg:transition lg:duration-500 lg:ease-in-out">
