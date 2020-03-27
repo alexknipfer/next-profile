@@ -1,14 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import Menu from './menu';
 import MenuIcon from './menu-icon';
 import GlobalStyle from '../global-style';
+import { initGA, logPageView } from '../../lib/analytics';
 
 const DefaultLayout = ({ children }) => {
   const { pathname } = useRouter();
   const [isMenuVisible, setMenuVisible] = useState(false);
+
+  useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+
+    logPageView();
+  }, []);
 
   const linkClasses = [
     'hidden',
