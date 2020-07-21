@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://alexknipfer.com/sitemap.xml
