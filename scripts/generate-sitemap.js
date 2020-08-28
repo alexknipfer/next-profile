@@ -6,8 +6,8 @@ const prettier = require('prettier');
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
 
   const pages = await globby([
-    'pages/**/*{.js,.mdx}',
-    '!pages/_*.js',
+    'pages/**/*{.ts,.tsx,.mdx}',
+    '!pages/_*.tsx',
     '!pages/api',
   ]);
 
@@ -18,7 +18,8 @@ const prettier = require('prettier');
           .map((page) => {
             const path = page
               .replace('pages', '')
-              .replace('.js', '')
+              .replace('.tsx', '')
+              .replace('.ts', '')
               .replace('.mdx', '');
 
             const route = path === '/index' ? '' : path;
