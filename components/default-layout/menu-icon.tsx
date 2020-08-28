@@ -12,11 +12,17 @@ const closedTransformationConfig = {
   bottom: 'translate(5, 32) rotate(-45)',
 };
 
-const MenuIcon = ({ isOpen }) => {
+type TransformationConfig = typeof openedTransformationConfig;
+
+interface Props {
+  isOpen: boolean;
+}
+
+const MenuIcon: React.FC<Props> = ({ isOpen }) => {
   const props = useSpring({
     to: isOpen ? closedTransformationConfig : openedTransformationConfig,
     config: config.stiff,
-  });
+  }) as TransformationConfig;
 
   return (
     <svg

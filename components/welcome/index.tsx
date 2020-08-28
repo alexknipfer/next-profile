@@ -1,6 +1,7 @@
 import { useTrail, animated, SpringConfig, useSpring } from 'react-spring';
 
 const welcomeTextItems = ['Welcome', 'to', 'the', 'portfolio', 'of'];
+
 const config = {
   mass: 5,
   tension: 2000,
@@ -38,7 +39,7 @@ const aboutMeTextItems = [
   },
 ];
 
-const Welcome = () => {
+const Welcome: React.FC = () => {
   const imageProps = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } });
 
   const welcomeTextTrail = useTrail(welcomeTextItems.length, {

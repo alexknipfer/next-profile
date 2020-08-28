@@ -1,6 +1,5 @@
-const GlobalStyle = () => {
-  return (
-    <style jsx global>
+const GlobalStyle: React.FC = () => (
+  <style jsx global>
       {`
         html,
         body,
@@ -30,7 +29,6 @@ const GlobalStyle = () => {
         }
       `}
     </style>
-  );
-};
+)
 
 export default GlobalStyle;

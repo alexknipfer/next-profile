@@ -22,7 +22,11 @@ const navItems = [
   },
 ];
 
-const Menu = ({ isOpen }) => {
+interface Props {
+  isOpen: boolean;
+}
+
+const Menu: React.FC<Props> = ({ isOpen }) => {
   const navItemsTrail = useTrail(navItems.length, {
     opacity: isOpen ? 1 : 0,
     marginLeft: isOpen ? 20 : -100,

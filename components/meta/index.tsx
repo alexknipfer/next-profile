@@ -1,6 +1,13 @@
 import Head from 'next/head';
 
-export default ({ title, description, url, keywords }) => (
+interface Props {
+  title: string;
+  url?: string;
+  description?: string;
+  keywords?: string;
+}
+
+const Meta: React.FC<Props> = ({ title, description, url, keywords }) => (
   <Head>
     {title && <title>{title}</title>}
     {title && <meta name="og:title" content={title} />}
@@ -10,3 +17,5 @@ export default ({ title, description, url, keywords }) => (
     {keywords && <meta name="keywords" content={keywords} />}
   </Head>
 );
+
+export default Meta;
