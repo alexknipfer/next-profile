@@ -25,9 +25,8 @@ const projects = [
   },
 ];
 
-const Projects = () => {
-  return (
-    <DefaultLayout>
+const Projects = () => (
+  <DefaultLayout>
       <Meta
         title="Projects | Alex Knipfer"
         description="View Alex Knipfer's open source projects"
@@ -41,7 +40,6 @@ const Projects = () => {
         </div>
       </div>
     </DefaultLayout>
-  );
-};
+)
 
 export default Projects;

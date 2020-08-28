@@ -7,14 +7,14 @@ import MenuIcon from './menu-icon';
 import GlobalStyle from '../global-style';
 import { initGA, logPageView } from '../../lib/analytics';
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout: React.FC = ({ children }) => {
   const { pathname } = useRouter();
   const [isMenuVisible, setMenuVisible] = useState(false);
 
   useEffect(() => {
-    if (!window.GA_INITIALIZED) {
+    if (!(window as any).GA_INITIALIZED) {
       initGA();
-      window.GA_INITIALIZED = true;
+      (window as any).GA_INITIALIZED = true;
     }
 
     logPageView();

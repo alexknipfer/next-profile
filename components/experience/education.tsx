@@ -1,4 +1,4 @@
-const Education = () => {
+const Education: React.FC = () => {
   return (
     <div className="border-l border-black border-solid pl-5 mb-10">
       <div className="uppercase text-copy-headerLight text-3xl leading-9 mb-3">
