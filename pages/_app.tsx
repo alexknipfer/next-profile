@@ -5,6 +5,7 @@ import Head from 'next/head';
 
 import { useApollo } from '../lib/apolloClient';
 
+import '../css/global.css';
 import '../css/tailwind.css';
 import '../css/theme.css';
 
