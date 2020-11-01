@@ -1,4 +1,7 @@
-import { useTrail, animated, SpringConfig, useSpring } from 'react-spring';
+import Image from 'next/image';
+import { useTrail, animated, useSpring } from 'react-spring';
+
+import { PrismicImage } from '../../interfaces/Prismic';
 
 const welcomeTextItems = ['Welcome', 'to', 'the', 'portfolio', 'of'];
 
@@ -39,7 +42,11 @@ const aboutMeTextItems = [
   },
 ];
 
-const Welcome: React.FC = () => {
+interface Props {
+  profileImage: PrismicImage;
+}
+
+const Welcome: React.FC<Props> = ({ profileImage }) => {
   const imageProps = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } });
 
   const welcomeTextTrail = useTrail(welcomeTextItems.length, {
@@ -66,7 +73,7 @@ const Welcome: React.FC = () => {
             className="text-right pr-8 text-xl leading-8 text-black uppercase"
             style={{
               ...rest,
-              transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
+              transform: x.interpolate((x) => `translate3d(0, ${x}px, 0)`),
             }}
           >
             <animated.div style={{ height }}>
@@ -75,13 +82,9 @@ const Welcome: React.FC = () => {
           </animated.div>
         ))}
       </div>
-      <div className="w-64 md:w-2/6">
-        <animated.img
-          src="/static/images/profile_pic.png"
-          alt="profile pic"
-          style={imageProps}
-        />
-      </div>
+      <animated.div className="w-64 md:w-2/6" style={imageProps}>
+        <Image src={profileImage.url} alt={profileImage.alt} unsized />
+      </animated.div>
       <div className="border-l border-solid border-black pl-3 mt-6 md:pl-8 md:mb-0 md:border-none">
         {aboutMeTextTrail.map(({ x, ...rest }, index) => {
           const currentItem = aboutMeTextItems[index];
@@ -91,7 +94,7 @@ const Welcome: React.FC = () => {
               key={index}
               style={{
                 ...rest,
-                transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
+                transform: x.interpolate((x) => `translate3d(0, ${x}px, 0)`),
               }}
             >
               {currentItem.type === 'firstName' && (
