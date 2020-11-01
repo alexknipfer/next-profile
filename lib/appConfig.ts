@@ -1,5 +1,3 @@
-import App from '../pages/_app';
-
 class AppConfig {
   public readonly prismicRepository: string = '';
   public readonly prismicGraphQLAPIUrl: string = '';

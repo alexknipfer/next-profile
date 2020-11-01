@@ -27,19 +27,19 @@ const projects = [
 
 const Projects = () => (
   <DefaultLayout>
-      <Meta
-        title="Projects | Alex Knipfer"
-        description="View Alex Knipfer's open source projects"
-        url="https://alexknipfer.com/projects"
-      />
-      <div className="flex justify-center items-start md:items-center h-full overflow-y-scroll pt-20 md:pt-0">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 mb-20 md:mb-0">
-          {projects.map((p, i) => (
-            <Card name={p.name} link={p.link} img={p.img} key={i} />
-          ))}
-        </div>
+    <Meta
+      title="Projects | Alex Knipfer"
+      description="View Alex Knipfer's open source projects"
+      url="https://alexknipfer.com/projects"
+    />
+    <div className="flex justify-center items-start md:items-center h-full overflow-y-scroll pt-20 md:pt-0">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 mb-20 md:mb-0">
+        {projects.map((p, i) => (
+          <Card name={p.name} link={p.link} img={p.img} key={i} />
+        ))}
       </div>
-    </DefaultLayout>
-)
+    </div>
+  </DefaultLayout>
+);
 
 export default Projects;
