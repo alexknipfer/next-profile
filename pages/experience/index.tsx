@@ -12,7 +12,11 @@ const config = {
   friction: 200,
 };
 
-const experienceComponents = [<Careers />, <Education />, <Technologies />];
+const experienceComponents = [
+  <Careers key="careers" />,
+  <Education />,
+  <Technologies key="technologies" />,
+];
 
 const Experience = () => {
   const componentTrail = useTrail(experienceComponents.length, {
@@ -36,7 +40,7 @@ const Experience = () => {
               key={index}
               style={{
                 ...rest,
-                transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
+                transform: x.interpolate((x) => `translate3d(0, ${x}px, 0)`),
               }}
             >
               {experienceComponents[index]}
