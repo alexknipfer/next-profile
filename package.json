@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write \"**/*.{tsx,ts,css,md,js,html}\"",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [],
   "author": "alexknipfer",
@@ -16,13 +17,13 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run lint"
+      "pre-push": "npm run lint:fix"
     }
   },
   "lint-staged": {
     "*.{ts,tsx,js,json}": [
       "prettier --write",
-      "lint"
+      "eslint"
     ],
     "*.{md,css}": [
       "prettier --write"
