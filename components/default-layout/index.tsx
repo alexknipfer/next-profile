@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import Menu from './menu';
-import MenuIcon from './menu-icon';
 import GlobalStyle from '../global-style';
 import { initGA, logPageView } from '../../lib/analytics';
+
+import Menu from './menu';
+import MenuIcon from './menu-icon';
 
 const DefaultLayout: React.FC = ({ children }) => {
   const { pathname } = useRouter();
@@ -38,32 +39,36 @@ const DefaultLayout: React.FC = ({ children }) => {
     <div className="h-full relative theme-light bg-background-primary">
       <Link href="/">
         <a
-          className={`home-link ${linkClasses.join(' ')} ${pathname === '/' &&
-            'bg-background-text text-white'}`}
+          className={`home-link ${linkClasses.join(' ')} ${
+            pathname === '/' && 'bg-background-text text-white'
+          }`}
         >
           Home
         </a>
       </Link>
       <Link href="/projects">
         <a
-          className={`project-link ${linkClasses.join(' ')} ${pathname ===
-            '/projects' && 'bg-background-text text-white'}`}
+          className={`project-link ${linkClasses.join(' ')} ${
+            pathname === '/projects' && 'bg-background-text text-white'
+          }`}
         >
           Projects
         </a>
       </Link>
       <Link href="/experience">
         <a
-          className={`experience-link ${linkClasses.join(' ')} ${pathname ===
-            '/experience' && 'bg-background-text text-white'}`}
+          className={`experience-link ${linkClasses.join(' ')} ${
+            pathname === '/experience' && 'bg-background-text text-white'
+          }`}
         >
           Experience
         </a>
       </Link>
       <Link href="/contact">
         <a
-          className={`contact-link ${linkClasses.join(' ')} ${pathname ===
-            '/contact' && 'bg-background-text text-white'}`}
+          className={`contact-link ${linkClasses.join(' ')} ${
+            pathname === '/contact' && 'bg-background-text text-white'
+          }`}
         >
           Contact
         </a>
