@@ -4,6 +4,7 @@ import DefaultLayout from '../../components/default-layout';
 import Careers from '../../components/experience/careers';
 import Education from '../../components/experience/education';
 import Technologies from '../../components/experience/technologies';
+
 import Meta from '../../components/meta';
 
 const config = {
@@ -14,7 +15,7 @@ const config = {
 
 const experienceComponents = [
   <Careers key="careers" />,
-  <Education />,
+  <Education key="education" />,
   <Technologies key="technologies" />,
 ];
 
