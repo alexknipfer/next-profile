@@ -13,10 +13,16 @@
   "keywords": [],
   "author": "alexknipfer",
   "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run lint"
+    }
+  },
   "lint-staged": {
     "*.{ts,tsx,js,json}": [
       "prettier --write",
-      "eslint"
+      "lint"
     ],
     "*.{md,css}": [
       "prettier --write"
