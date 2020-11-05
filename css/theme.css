@@ -6,6 +6,9 @@
 
   /** Text **/
   --text-copy-header-light: #999999;
+
+  /** Card **/
+  --card-border: #cbd5e0;
 }
 
 .theme-dark {
@@ -16,4 +19,7 @@
 
   /** Text **/
   --text-copy-header-light: #999999;
+
+  /** Card **/
+  --card-border: #cbd5e0;
 }

@@ -5,6 +5,7 @@ module.exports = {
         tiny: '0.6rem',
       },
       colors: {
+        'card-border': 'var(--card-border)',
         background: {
           primary: 'var(--bg-background-primary)',
           text: 'var(--bg-background-text)',

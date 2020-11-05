@@ -4,9 +4,10 @@ import { useRouter } from 'next/router';
 
 import GlobalStyle from '../global-style';
 import { initGA, logPageView } from '../../lib/analytics';
+import NowPlaying from '../now-playing';
 
-import Menu from './menu';
 import MenuIcon from './menu-icon';
+import Menu from './menu';
 
 const DefaultLayout: React.FC = ({ children }) => {
   const { pathname } = useRouter();
@@ -37,6 +38,9 @@ const DefaultLayout: React.FC = ({ children }) => {
 
   return (
     <div className="h-full relative theme-light bg-background-primary">
+      <div className="now-playing hidden md:block">
+        <NowPlaying />
+      </div>
       <Link href="/">
         <a
           className={`home-link ${linkClasses.join(' ')} ${
@@ -85,6 +89,12 @@ const DefaultLayout: React.FC = ({ children }) => {
         .link {
           border: 1px solid #443a3a;
           letter-spacing: 0.2em;
+        }
+
+        .now-playing {
+          position: absolute;
+          top: 15px;
+          right: 15px;
         }
 
         .home-link {
