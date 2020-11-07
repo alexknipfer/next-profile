@@ -8,7 +8,7 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
         </Head>
-        <body>
+        <body className="theme-light">
           <Main />
           <NextScript />
         </body>
