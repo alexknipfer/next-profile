@@ -23,11 +23,11 @@ const navItems = [
   },
 ];
 
-export const Nav: React.FC = () => {
+const Nav: React.FC = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
 
   return (
-    <nav className="flex h-16 bg-background-navigation max-w-screen-lg items-center mx-auto px-4 md:px-8">
+    <nav className="flex h-16 bg-background-navigation max-w-screen-md items-center mx-auto px-4 md:px-8 my-5">
       <div
         className="z-20 md:hidden"
         onClick={() => setMenuVisible(!isMenuVisible)}
@@ -45,3 +45,5 @@ export const Nav: React.FC = () => {
     </nav>
   );
 };
+
+export default Nav;
