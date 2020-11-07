@@ -13,7 +13,8 @@ module.exports = {
           overlay: 'var(--bg-background-overlay)',
         },
         copy: {
-          headerLight: 'var(--text-copy-header-light)',
+          heading: 'var(--text-copy-heading)',
+          body: 'var(--text-copy-body)',
         },
       },
     },

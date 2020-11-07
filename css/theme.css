@@ -5,7 +5,8 @@
   --bg-background-text: #443a3a;
   --bg-background-overlay: rgba(255, 255, 255, 0.95);
 
-  --text-copy-header-light: #999999;
+  --text-copy-heading: #000000;
+  --text-copy-body: #443a3a;
 }
 
 .theme-dark {
@@ -15,5 +16,6 @@
   --bg-background-text: #ffffff;
   --bg-background-overlay: rgba(255, 255, 255, 0.95);
 
-  --text-copy-header-light: #999999;
+  --text-copy-heading: #000000;
+  --text-copy-body: #443a3a;
 }
