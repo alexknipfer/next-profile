@@ -8,7 +8,6 @@ const GlobalStyle: React.FC = () => (
         height: 100%;
         width: 100%;
         font-weight: 400;
-        font-size: calc(12px + 0.9vw);
       }
       *,
       *:after,
@@ -17,14 +16,6 @@ const GlobalStyle: React.FC = () => (
       }
       body {
         margin: 0;
-      }
-      @media screen and (min-width: 1920px) {
-        html,
-        body,
-        body > div:first-child,
-        div#__next {
-          font-size: 30px;
-        }
       }
     `}
   </style>
