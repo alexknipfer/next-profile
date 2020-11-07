@@ -2,7 +2,7 @@ import { useEffect, Fragment } from 'react';
 
 import GlobalStyle from '../global-style';
 import { initGA, logPageView } from '../../lib/analytics';
-import { Nav } from '../nav';
+import Navigation from '../nav';
 
 const DefaultLayout: React.FC = ({ children }) => {
   useEffect(() => {
@@ -16,8 +16,8 @@ const DefaultLayout: React.FC = ({ children }) => {
 
   return (
     <Fragment>
-      <Nav />
-      <main className="flex justify-center flex-col max-w-screen-lg mx-auto">
+      <Navigation />
+      <main className="flex justify-center flex-col max-w-screen-md mx-auto px-4 md:px-12">
         {children}
       </main>
       <GlobalStyle />
