@@ -7,6 +7,7 @@ import { initializeApollo } from '../lib/apolloClient';
 import Heading from '../components/heading';
 import ProjectCard from '../components/project-card';
 import GitHubIcon from '../public/static/icons/github.svg';
+import TechnicalSkills from '../components/technical-skills';
 
 const HOMEPAGE_QUERY = gql`
   query {
@@ -55,7 +56,7 @@ const Home = () => {
           Engineer.
         </p>
       </section>
-      <section>
+      <section className="mb-10">
         <Heading level="h2">Projects</Heading>
         <div className="grid grid-cols-2 auto-rows-auto gap-5 mb-5">
           {projects.map((project) => (
@@ -73,6 +74,14 @@ const Home = () => {
             check out my GitHub!
           </div>
         </a>
+      </section>
+      <section>
+        <Heading level="h2">Technical Skills</Heading>
+        <p className="text-copy-body mb-5">
+          I am always expanding my technical skills, the following is a list of
+          the tech I&apos;m <i>actively</i> working with!
+        </p>
+        <TechnicalSkills />
       </section>
     </DefaultLayout>
   );
