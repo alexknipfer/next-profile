@@ -18,7 +18,7 @@ const DefaultLayout: React.FC = ({ children }) => {
   return (
     <Fragment>
       <Navigation />
-      <main className="flex justify-center flex-col max-w-screen-md mx-auto px-4 pb-20 md:px-12">
+      <main className="flex justify-center flex-col max-w-screen-md mx-auto px-6 pb-20 md:px-12">
         {children}
       </main>
       <Footer />
