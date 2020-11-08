@@ -10,7 +10,7 @@ const NowPlaying: React.FC = () => {
   }
 
   return (
-    <div className="border border-card-border rounded-md flex items-center w-40 p-2 shadow">
+    <div className="relative border border-card-border rounded-md flex items-center w-64 p-3 shadow">
       <img
         src={data.albumImage}
         className="rounded block w-1/4"
@@ -27,11 +27,11 @@ const NowPlaying: React.FC = () => {
           href={data.songUrl}
           target="_blank"
           rel="noreferrer"
-          className="text-tiny font-bold truncate block hover:underline"
+          className="font-bold truncate block hover:underline text-sm"
         >
           {data.songName}
         </a>
-        <div className="text-tiny truncate">{data.artists}</div>
+        <div className="truncate">{data.artists}</div>
       </div>
     </div>
   );
