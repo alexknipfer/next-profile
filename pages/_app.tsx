@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { SWRConfig } from 'swr';
 
 import { useApollo } from '../lib/apolloClient';
 
@@ -21,7 +22,14 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         />
       </Head>
       <ApolloProvider client={apolloClient}>
-        <Component {...pageProps} />
+        <SWRConfig
+          value={{
+            fetcher: (resource, init) =>
+              fetch(resource, init).then((res) => res.json()),
+          }}
+        >
+          <Component {...pageProps} />
+        </SWRConfig>
       </ApolloProvider>
     </Fragment>
   );
