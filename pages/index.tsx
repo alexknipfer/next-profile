@@ -58,7 +58,7 @@ const Home = () => {
       </section>
       <section className="mb-10">
         <Heading level="h2">Projects</Heading>
-        <div className="grid grid-cols-2 auto-rows-auto gap-5 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-5 mb-5">
           {projects.map((project) => (
             <ProjectCard key={project.link} {...project} />
           ))}
