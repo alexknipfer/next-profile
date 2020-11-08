@@ -27,7 +27,7 @@ const Nav: React.FC = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
 
   return (
-    <nav className="flex h-16 bg-navigation max-w-screen-md items-center mx-auto px-4 md:px-8 my-8">
+    <nav className="sticky top-0 z-10 flex h-16 bg-navigation max-w-screen-md items-center mx-auto px-4 md:px-8 my-8">
       <div
         className="z-20 md:hidden"
         onClick={() => setMenuVisible(!isMenuVisible)}
