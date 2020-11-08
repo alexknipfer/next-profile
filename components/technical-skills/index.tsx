@@ -33,7 +33,7 @@ const technicalSkills = [
 ];
 
 const TechnicalSkills: React.FC = () => (
-  <div className="grid grid-cols-2 auto-rows-auto gap-5 mb-5">
+  <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-5 mb-5">
     {technicalSkills.map(({ icon: Icon, name }) => (
       <div
         key={name}
