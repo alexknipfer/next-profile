@@ -13,6 +13,7 @@ module.exports = {
         'project-card-shadow': 'var(--bg-project-card-shadow)',
         'project-card-details': 'var(--bg-project-card-details)',
         'card-border': 'var(--card-border)',
+        'horizontal-rule': 'var(--horizontal-rule)',
         copy: {
           heading: 'var(--text-copy-heading)',
           body: 'var(--text-copy-body)',
