@@ -1,4 +1,7 @@
 module.exports = {
+  variants: {
+    margin: ['responsive', 'last'],
+  },
   theme: {
     extend: {
       fontSize: {
