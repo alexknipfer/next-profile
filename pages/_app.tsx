@@ -3,12 +3,11 @@ import { ApolloProvider } from '@apollo/client';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { SWRConfig } from 'swr';
+import { useApollo } from '@/lib/apolloClient';
 
-import { useApollo } from '../lib/apolloClient';
-
-import '../css/global.css';
-import '../css/tailwind.css';
-import '../css/theme.css';
+import '@/styles/global.css';
+import '@/styles/tailwind.css';
+import '@/styles/theme.css';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const apolloClient = useApollo(pageProps.initialApolloState);

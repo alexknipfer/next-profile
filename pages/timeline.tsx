@@ -1,9 +1,8 @@
 import { Fragment } from 'react';
-
-import DefaultLayout from '../components/default-layout';
-import Meta from '../components/meta';
-import Heading from '../components/heading';
-import TimelineStep from '../components/timeline-step';
+import DefaultLayout from '@/components/default-layout';
+import Meta from '@/components/meta';
+import Heading from '@/components/heading';
+import TimelineStep from '@/components/timeline-step';
 
 interface TimelineList {
   year: number;

@@ -1,7 +1,6 @@
 import { NextApiResponse, NextApiRequest } from 'next';
-
-import { SpotifyNowPlayingResponse } from '../../interfaces/Spotify';
-import { getNowPlayingTrack } from '../../lib/spotify';
+import { SpotifyNowPlayingResponse } from '@/interfaces/Spotify';
+import { getNowPlayingTrack } from '@/lib/spotify';
 
 export interface NowPlayingResponse {
   isPlaying: boolean;

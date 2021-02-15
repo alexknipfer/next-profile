@@ -1,21 +1,10 @@
-import { GetStaticProps } from 'next';
-import { gql } from '@apollo/client';
+import DefaultLayout from '@/components/default-layout';
+import Meta from '@/components/meta';
+import Heading from '@/components/heading';
+import ProjectCard from '@/components/project-card';
+import TechnicalSkills from '@/components/technical-skills';
 
-import DefaultLayout from '../components/default-layout';
-import Meta from '../components/meta';
-import { initializeApollo } from '../lib/apolloClient';
-import Heading from '../components/heading';
-import ProjectCard from '../components/project-card';
 import GitHubIcon from '../public/static/icons/github.svg';
-import TechnicalSkills from '../components/technical-skills';
-
-const HOMEPAGE_QUERY = gql`
-  query {
-    homepage(uid: "homepage", lang: "en-us") {
-      profile_image
-    }
-  }
-`;
 
 const projects = [
   {
@@ -85,21 +74,6 @@ const Home = () => {
       </section>
     </DefaultLayout>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const apolloClient = initializeApollo();
-
-  await apolloClient.query({
-    query: HOMEPAGE_QUERY,
-  });
-
-  return {
-    props: {
-      initialApolloState: apolloClient.cache.extract(),
-    },
-    revalidate: 1,
-  };
 };
 
 export default Home;

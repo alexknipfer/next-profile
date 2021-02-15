@@ -1,10 +1,9 @@
 import { useTrail, animated } from 'react-spring';
-
-import DefaultLayout from '../../components/default-layout';
-import Careers from '../../components/experience/careers';
-import Education from '../../components/experience/education';
-import Technologies from '../../components/experience/technologies';
-import Meta from '../../components/meta';
+import DefaultLayout from '@/components/default-layout';
+import Careers from '@/components/experience/careers';
+import Education from '@/components/experience/education';
+import Technologies from '@/components/experience/technologies';
+import Meta from '@/components/meta';
 
 const config = {
   mass: 5,

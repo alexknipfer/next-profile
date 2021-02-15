@@ -1,8 +1,7 @@
 import querystring from 'querystring';
 
-import { SpotifyTokenResponse } from '../interfaces/Spotify';
-
-import { appConfig } from './appConfig';
+import { SpotifyTokenResponse } from '@/interfaces/Spotify';
+import { appConfig } from '@/lib/appConfig';
 
 const authToken = Buffer.from(
   `${appConfig.spotifyClientId}:${appConfig.spotifyClientSecret}`,
