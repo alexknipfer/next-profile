@@ -41,7 +41,8 @@ const ProjectCard: React.FC<Props> = ({ name, link, img }) => {
       <NextImage
         src={img}
         alt={`${name} Project`}
-        unsized
+        width={872}
+        height={493}
         className="rounded-md"
       />
     </div>
