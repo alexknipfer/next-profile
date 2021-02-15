@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { SWRConfig } from 'swr';
+import { ThemeProvider } from 'next-themes';
 import { useApollo } from '@/lib/apolloClient';
 
 import '@/styles/global.css';
@@ -13,7 +14,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const apolloClient = useApollo(pageProps.initialApolloState);
 
   return (
-    <Fragment>
+    <ThemeProvider attribute="class">
       <Head>
         <meta
           name="viewport"
@@ -30,7 +31,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </SWRConfig>
       </ApolloProvider>
-    </Fragment>
+    </ThemeProvider>
   );
 };
 

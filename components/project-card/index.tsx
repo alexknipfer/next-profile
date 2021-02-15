@@ -19,20 +19,20 @@ const ProjectCard: React.FC<Props> = ({ name, link, img }) => {
     >
       <div
         className={classNames(
-          'absolute top-0 left-0 w-full h-full flex flex-col justify-items-end bg-project-card-shadow transition-opacity duration-200 rounded-md',
+          'absolute top-0 left-0 z-10 w-full h-full flex flex-col justify-items-end transition-opacity duration-200 rounded-md bg-black bg-opacity-40',
           {
             'opacity-0': !isOverlayVisible,
             'opacity-100': isOverlayVisible,
           },
         )}
       >
-        <div className="bg-project-card-details mt-auto rounded-b-md flex items-center flex-col py-3 px-4">
-          <div className="font-thin text-copy-project-card">{name}</div>
+        <div className="bg-black bg-opacity-70 mt-auto rounded-b-md flex items-center flex-col py-3 px-4">
+          <div className="font-thin text-gray-200">{name}</div>
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-copy-link"
+            className="text-blue-400"
           >
             {link}
           </a>

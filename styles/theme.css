@@ -18,7 +18,7 @@
 }
 
 .theme-dark {
-  --bg-background-navigation: #ffffff;
+  --bg-background-navigation: #000000;
   --bg-background-navigation-hover: #edf2f7;
   --bg-background-primary: #000000;
   --bg-background-text: #ffffff;
