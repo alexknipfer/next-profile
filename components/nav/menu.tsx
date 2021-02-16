@@ -43,7 +43,7 @@ const Menu: React.FC<Props> = ({ isOpen }) => {
             style={{ marginBottom: 27, ...props }}
           >
             <Link href={navItems[index].path}>
-              <a className="text-3xl text-black uppercase border-l border-solid border-black pl-4">
+              <a className="text-3xl text-black dark:text-gray-200 uppercase border-l border-solid border-black dark:border-gray-200 pl-4">
                 {navItems[index].text}
               </a>
             </Link>

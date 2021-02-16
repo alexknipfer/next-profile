@@ -20,15 +20,16 @@ const Nav: React.FC = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
 
   return (
-    <nav className="nav-backdrop sticky top-0 z-20 max-w-screen-md mx-auto px-4 md:px-8 my-8 bg-white dark:bg-gray-900 bg-opacity-60">
+    <nav className="sticky top-0 z-20 max-w-screen-md mx-auto p-4 md:p-6 bg-white dark:bg-gray-900 bg-opacity-60 nav-backdrop">
       <Menu isOpen={isMenuVisible} />
-      <div
-        className="z-30 md:hidden absolute"
-        onClick={() => setMenuVisible(!isMenuVisible)}
-      >
-        <MenuIcon isOpen={isMenuVisible} />
-      </div>
       <div className="flex justify-between items-center w-full h-16">
+        <button
+          aria-label="Open navigation menu"
+          className="relative z-40 md:hidden text-gray-900 dark:text-gray-200"
+          onClick={() => setMenuVisible(!isMenuVisible)}
+        >
+          <MenuIcon isOpen={isMenuVisible} />
+        </button>
         <div className="sm:hidden md:block">
           {navItems.map(({ path, name }) => (
             <Link key={path} href={path}>
