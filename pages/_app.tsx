@@ -8,7 +8,6 @@ import { useApollo } from '@/lib/apolloClient';
 
 import '@/styles/global.css';
 import '@/styles/tailwind.css';
-import '@/styles/theme.css';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const apolloClient = useApollo(pageProps.initialApolloState);

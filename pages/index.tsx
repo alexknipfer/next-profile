@@ -39,7 +39,7 @@ const Home = () => {
       />
       <section className="mb-10">
         <Heading level="h1">Hello, I&apos;m Alex Knipfer</Heading>
-        <p className="text-gray-700 dark:text-white">
+        <p className="text-gray-700 dark:text-gray-200">
           I&apos;m a developer, chess player, and a disc golfer. I am located in
           Cincinnati and currently work for Ascendum Solutions as a Full Stack
           Engineer.
@@ -56,16 +56,16 @@ const Home = () => {
           href="https://github.com/alexknipfer"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-card-border border rounded p-5 flex items-center text-sm hover:shadow transition-shadow duration-150"
+          className="text-gray-700 dark:text-gray-200 border-card-border border rounded p-5 flex items-center text-sm hover:shadow transition-shadow duration-150"
         >
-          <GitHubIcon width={30} height={30} className="mr-5" />
+          <GitHubIcon width={30} height={30} className="mr-5 fill-current" />
           Interested in seeing more? I&apos;m always tinkering with something,
           check out my GitHub!
         </a>
       </section>
       <section>
         <Heading level="h2">Technical Skills</Heading>
-        <p className="text-gray-700 mb-5 dark:text-white">
+        <p className="text-gray-700 mb-5 dark:text-gray-200">
           I am always expanding my technical skills, the following is a list of
           the tech I&apos;m <i>actively</i> working with!
         </p>

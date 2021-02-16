@@ -43,9 +43,9 @@ const Footer: React.FC = () => {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 hover:bg-navigation-hover rounded transition duration-300"
+              className="hover:bg-gray-100 dark:hover:bg-gray-800 p-3 rounded transition duration-300 text-gray-700 dark:text-gray-200"
             >
-              <Icon width={20} height={20} fill="#443a3a" />
+              <Icon width={20} height={20} className="fill-current" />
             </a>
           );
         })}

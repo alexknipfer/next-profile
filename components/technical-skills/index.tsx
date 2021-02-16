@@ -37,9 +37,9 @@ const TechnicalSkills: React.FC = () => (
     {technicalSkills.map(({ icon: Icon, name }) => (
       <div
         key={name}
-        className="border-card-border border rounded p-5 flex items-center text-sm"
+        className="border-card-border border rounded p-5 flex items-center text-sm text-gray-700 dark:text-gray-200"
       >
-        <Icon width={30} height={30} fill="#443a3a" className="mr-5" />
+        <Icon width={30} height={30} className="mr-5 fill-current" />
         {name}
       </div>
     ))}
