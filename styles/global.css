@@ -9,8 +9,8 @@
     U+FEFF, U+FFFD;
 }
 
-body {
-  font-family: 'Ubuntu';
+#__next {
+  min-height: 100vh;
 }
 
 img {
