@@ -1,5 +1,4 @@
 import { useEffect, Fragment } from 'react';
-import GlobalStyle from '@/components/global-style';
 import { initGA, logPageView } from '@/lib/analytics';
 import Navigation from '@/components/nav';
 import Footer from '@/components/footer';
@@ -21,7 +20,6 @@ const DefaultLayout: React.FC = ({ children }) => {
         {children}
       </main>
       <Footer />
-      <GlobalStyle />
     </Fragment>
   );
 };
