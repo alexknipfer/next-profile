@@ -27,7 +27,7 @@ const Nav: React.FC = () => {
   const DarkModeSwitchIcon = isDarkTheme ? SunIcon : MoonIcon;
 
   return (
-    <nav className="nav-backdrop sticky top-0 z-20 max-w-screen-md mx-auto px-4 md:px-8 my-8 bg-white dark:bg-gray-900 bg-opacity-80">
+    <nav className="nav-backdrop sticky top-0 z-20 max-w-screen-md mx-auto px-4 md:px-8 my-8 bg-white dark:bg-gray-900 bg-opacity-60">
       <div
         className="z-20 md:hidden"
         onClick={() => setMenuVisible(!isMenuVisible)}
