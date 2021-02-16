@@ -10,8 +10,8 @@ const Heading: React.FC<Props> = ({ level, children }) => {
   return (
     <Tag
       className={classNames('font-bold mb-2 text-black dark:text-white', {
-        'text-5xl': level === 'h1',
-        'text-4xl': level === 'h2',
+        'text-4xl md:text-5xl': level === 'h1',
+        'text-3xl md:text-4xl': level === 'h2',
       })}
     >
       {children}
