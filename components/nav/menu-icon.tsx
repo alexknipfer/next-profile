@@ -26,9 +26,9 @@ const MenuIcon: React.FC<Props> = ({ isOpen }) => {
 
   return (
     <svg
-      width="44"
+      width="40"
       height="44"
-      fill="#443A3A"
+      className="fill-current"
       xmlns="http://www.w3.org/2000/svg"
     >
       <animated.rect width="35" height="3" rx="3" transform={props.top} />

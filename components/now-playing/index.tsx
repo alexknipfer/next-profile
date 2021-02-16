@@ -32,6 +32,7 @@ const NowPlaying: React.FC = () => {
           width={15}
           height={15}
           className="absolute top-2 right-2"
+          alt="Spotify music logo"
         />
       )}
       <div className="w-3/4 pl-4">
@@ -40,14 +41,14 @@ const NowPlaying: React.FC = () => {
             href={data.songUrl}
             target="_blank"
             rel="noreferrer"
-            className="font-bold truncate block hover:underline text-sm"
+            className="font-bold truncate block hover:underline text-sm text-gray-700 dark:text-gray-200"
           >
             {data.songName}
           </a>
         ) : (
           'Spotify'
         )}
-        <div className="truncate">
+        <div className="truncate text-gray-700 dark:text-gray-200">
           {isPlaying ? data.artists : 'Not currently playing'}
         </div>
       </div>
