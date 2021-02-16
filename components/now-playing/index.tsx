@@ -8,11 +8,6 @@ const NowPlaying: React.FC = () => {
 
   const isPlaying = data && data.isPlaying;
 
-  console.log('IS PLAYING: ', isPlaying);
-  // if (!data || !data.isPlaying) {
-  //   return null;
-  // }
-
   return (
     <div className="relative border border-card-border rounded-md flex items-center w-64 p-3 shadow">
       {isPlaying ? (
