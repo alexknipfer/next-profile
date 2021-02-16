@@ -8,7 +8,7 @@ const Overlay: React.FC<Props> = ({ children, isVisible }) => {
   }
 
   return (
-    <div className="fixed w-full h-full top-0 left-0 z-10 bg-overlay">
+    <div className="fixed w-full h-full top-0 left-0 bg-white bg-opacity-95 z-20">
       {children}
     </div>
   );
