@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "headers": [
     {
-      "source": "/fonts/ubuntu-v15-latin-regular.woff2",
+      "source": "/fonts/arimo-var.woff2",
       "headers": [
         {
           "key": "Cache-Control",
