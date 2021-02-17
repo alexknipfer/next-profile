@@ -2,6 +2,34 @@ import DefaultLayout from '@/components/default-layout';
 import Heading from '@/components/heading';
 import { NextPage } from 'next';
 import Meta from '@/components/meta';
+import JobDetails from '@/components/job-details';
+
+const jobItems = [
+  {
+    companyName: 'Ascendum',
+    duration: 'May 2018 - Present',
+    companyWebsiteUrl: 'https://ascendum.com',
+    jobTitle: 'Full Stack Engineer',
+    jobListItems: [
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit sit amet, consectetur adipisicing elit sit amet, consectetur adipisicing elit',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    ],
+  },
+  {
+    companyName: 'Hoperator',
+    duration: 'June 2017 - May 2018',
+    companyWebsiteUrl: 'https://hoperator.com',
+    jobTitle: 'Full Stack Engineer',
+    jobListItems: [
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit sit amet, consectetur adipisicing elit sit amet, consectetur adipisicing elit',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    ],
+  },
+];
 
 const Experience: NextPage = () => {
   return (
@@ -16,34 +44,9 @@ const Experience: NextPage = () => {
       <Heading level="h2" className="mb-4">
         Where I&apos;ve Worked
       </Heading>
-      <div className="border-l border-gray-700 border-dashed pl-5 mb-4">
-        <Heading level="h3" className="mb-2">
-          Full Stack Engineer&nbsp;@&nbsp;
-          <a
-            href="https://ascendum.com"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-700"
-          >
-            Ascendum
-          </a>
-        </Heading>
-        <p className="text-gray-700 dark:text-gray-200">May 2018 - Present</p>
-      </div>
-      <div className="border-l border-gray-700 border-dashed pl-5">
-        <Heading level="h3" className="mb-2">
-          Full Stack Engineer&nbsp;@&nbsp;
-          <a
-            href="https://www.hoperator.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-700"
-          >
-            Hoperator
-          </a>
-        </Heading>
-        <p className="text-gray-700 dark:text-gray-200">May 2018 - Present</p>
-      </div>
+      {jobItems.map((jobItem, index) => (
+        <JobDetails key={`${jobItem.companyName}-${index}`} {...jobItem} />
+      ))}
     </DefaultLayout>
   );
 };
