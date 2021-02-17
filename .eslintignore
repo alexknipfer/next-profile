@@ -2,3 +2,4 @@
 node_modules/
 types/
 scripts/
+tailwind.config.js
