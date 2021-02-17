@@ -13,7 +13,7 @@ const Meta: React.FC<Props> = (customMeta) => {
   const meta = {
     title: 'Alex Knipfer - Full Stack Developer from Cincinnati.',
     description: 'Full stack developer, chess player, and disc golfer.',
-    image: 'https://alexknipfer.com/static/images/site_banner.png',
+    image: 'https://alexknipfer.com/static/images/site_banner.jpg',
     type: 'website',
     ...customMeta,
   };
