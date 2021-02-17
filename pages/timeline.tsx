@@ -16,6 +16,36 @@ interface TimelineItem {
 
 const timelineListItems: TimelineList[] = [
   {
+    year: 2020,
+    timelineItems: [
+      {
+        name: 'Quarantined 🔒',
+        description:
+          "What is there to say, 2020 was a year full of joy, had a blast living the quarantined life! I was able to spend the summer focusing on my disc golf game, it's a great social distancing sport!",
+      },
+    ],
+  },
+  {
+    year: 2019,
+    timelineItems: [
+      {
+        name: 'Moved to Cincinnati, OH 📦',
+        description:
+          'I grew up in the Northern Kentucky greater Cincinnati area, I decided to move back to be closer to my family. The company I work for is already headquarted in Cincinnati, so everything just fell into place!',
+      },
+    ],
+  },
+  {
+    year: 2018,
+    timelineItems: [
+      {
+        name: 'Joined Ascendum Solutions 𝌣',
+        description:
+          "I'm excited to work on a team that get's to work on a diverse set of projects with bleeding edge technologies!",
+      },
+    ],
+  },
+  {
     year: 2017,
     timelineItems: [
       {
@@ -43,6 +73,11 @@ const timelineListItems: TimelineList[] = [
   {
     year: 2014,
     timelineItems: [
+      {
+        name: 'Joined the St. Louis Chess Club ♛',
+        description:
+          'I really started enjoying the game of chess so I decided to join one of the best chess clubs in the US',
+      },
       {
         name: 'Worked at Cedar Point for the summer 🎢',
         description:
