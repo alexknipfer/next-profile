@@ -11,7 +11,7 @@ const ThemeSwitchButton: React.FC = () => {
 
   return (
     <button
-      aria-label={`Switch to ${theme} theme`}
+      aria-label="Toggle dark mode"
       onClick={() => setTheme(isDarkTheme ? 'light' : 'dark')}
       className="p-2 dark:text-gray-200 text-gray-700 bg-gray-200 dark:bg-gray-700 rounded-md"
     >

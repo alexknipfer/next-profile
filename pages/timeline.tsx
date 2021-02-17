@@ -154,11 +154,7 @@ const timelineListItems: TimelineList[] = [
 const Timeline = () => {
   return (
     <DefaultLayout>
-      <Meta
-        title="Timeline | Alex Knipfer"
-        description="Alex Knipfer's timeline and history."
-        url="https://alexknipfer.com/timeline"
-      />
+      <Meta />
       <section>
         <Heading level="h1">Timeline</Heading>
         {timelineListItems.map(({ year, timelineItems }, index) => (

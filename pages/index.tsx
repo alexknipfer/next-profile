@@ -32,11 +32,7 @@ const projects = [
 const Home = () => {
   return (
     <DefaultLayout>
-      <Meta
-        title="Alex Knipfer - Full Stack Developer from Cincinnati"
-        description="Developer that specializes in building web applications using tools such as React, Redux, Angular, GraphQL, MongoDB, and more. When I am not working, you will find me working and contributing to multiple open source projects (GitHub: github.com/alexknipfer) or getting some late night chess games in on Chess.com!"
-        url="https://alexknipfer.com"
-      />
+      <Meta />
       <section className="mb-10">
         <Heading level="h1">Hello, I&apos;m Alex.</Heading>
         <p className="text-gray-700 dark:text-gray-200">
