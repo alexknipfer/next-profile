@@ -8,7 +8,7 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/ubuntu-v15-latin-regular.woff2"
+            href="/fonts/arimo-var.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
