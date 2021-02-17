@@ -3,6 +3,7 @@ import Meta from '@/components/meta';
 import Heading from '@/components/heading';
 import ProjectCard from '@/components/project-card';
 import TechnicalSkills from '@/components/technical-skills';
+import { NextPage } from 'next';
 
 import GitHubIcon from '../public/static/icons/github.svg';
 
@@ -29,7 +30,7 @@ const projects = [
   },
 ];
 
-const Home = () => {
+const Home: NextPage = () => {
   return (
     <DefaultLayout>
       <Meta />
@@ -43,7 +44,7 @@ const Home = () => {
       </section>
       <section className="mb-10">
         <Heading level="h2">Projects</Heading>
-        <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-5 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-5 mb-5 mt-4">
           {projects.map((project) => (
             <ProjectCard key={project.link} {...project} />
           ))}
@@ -61,7 +62,7 @@ const Home = () => {
       </section>
       <section>
         <Heading level="h2">Technical Skills</Heading>
-        <p className="text-gray-700 mb-5 dark:text-gray-200">
+        <p className="text-gray-700 mb-5 dark:text-gray-200 mt-4">
           I am always expanding my technical skills, the following is a list of
           the tech I&apos;m <i>actively</i> working with!
         </p>
