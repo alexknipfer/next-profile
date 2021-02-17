@@ -1,4 +1,5 @@
-import Heading from '../heading';
+import Heading from '@/components/heading';
+import List from '@/components/list';
 
 interface Props {
   companyName: string;
@@ -29,18 +30,7 @@ const JobDetails: React.FC<Props> = ({
         </a>
       </Heading>
       <p className="text-gray-700 dark:text-gray-200 mb-4">{duration}</p>
-      <ul className="text-gray-700 dark:text-gray-200 list-arrow">
-        {jobListItems.map((item, index) => (
-          <li className="flex mb-2" key={`${item}-${index}`}>
-            <span>▹</span>
-            <p className="ml-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit sit amet,
-              consectetur adipisicing elit sit amet, consectetur adipisicing
-              elit
-            </p>
-          </li>
-        ))}
-      </ul>
+      <List listItems={jobListItems} />
     </div>
   );
 };
