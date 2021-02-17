@@ -38,7 +38,7 @@ const Home = () => {
         url="https://alexknipfer.com"
       />
       <section className="mb-10">
-        <Heading level="h1">Hello, I&apos;m Alex Knipfer</Heading>
+        <Heading level="h1">Hello, I&apos;m Alex.</Heading>
         <p className="text-gray-700 dark:text-gray-200">
           I&apos;m a developer, chess player, and a disc golfer. I am located in
           Cincinnati and currently work for Ascendum Solutions as a Full Stack
