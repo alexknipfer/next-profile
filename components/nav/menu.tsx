@@ -9,16 +9,8 @@ const navItems = [
     text: 'Home',
   },
   {
-    path: '/experience',
-    text: 'Experience',
-  },
-  {
-    path: '/projects',
-    text: 'Projects',
-  },
-  {
-    path: '/contact',
-    text: 'Contact',
+    path: '/timeline',
+    text: 'Timeline',
   },
 ];
 
