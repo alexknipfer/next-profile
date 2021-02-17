@@ -20,7 +20,7 @@ const Nav: React.FC = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-20 max-w-screen-md mx-auto p-4 md:p-6 bg-white dark:bg-gray-900 bg-opacity-60 nav-backdrop">
+    <nav className="sticky top-0 z-20 max-w-screen-md mx-auto px-6 py-2 md:p-6 bg-white dark:bg-gray-900 bg-opacity-60 nav-backdrop">
       <Menu isOpen={isMenuVisible} />
       <div className="flex justify-between items-center w-full h-16">
         <button
