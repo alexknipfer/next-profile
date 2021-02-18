@@ -2,34 +2,46 @@ import DefaultLayout from '@/components/default-layout';
 import Heading from '@/components/heading';
 import { NextPage } from 'next';
 import Meta from '@/components/meta';
-import JobDetails from '@/components/job-details';
+import ExperienceDetails from '@/components/experience-details';
 
 const jobItems = [
   {
-    companyName: 'Ascendum',
-    duration: 'May 2018 - Present',
-    companyWebsiteUrl: 'https://ascendum.com',
-    jobTitle: 'Full Stack Engineer',
-    jobListItems: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit sit amet, consectetur adipisicing elit sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    organizationName: 'Ascendum',
+    timeframe: 'May 2018 - Present',
+    websiteUrl: 'https://ascendum.com',
+    title: 'Full Stack Engineer',
+    listItems: [
+      'Write performant and maintainable code for multiple internal products and a large diverse set of clients.',
+      'Work with a variety of technogies and content management systems including, but not limited to, React, Angular, TypeScript, JavaScript, Prismic, and Fastify.',
+      'Daily communication with teams of engineers, designers, product owners, and clients.',
+      'Provide mentoring to new software engineers.',
     ],
   },
   {
-    companyName: 'Hoperator',
-    duration: 'June 2017 - May 2018',
-    companyWebsiteUrl: 'https://hoperator.com',
-    jobTitle: 'Full Stack Engineer',
-    jobListItems: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit sit amet, consectetur adipisicing elit sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    organizationName: 'Hoperator',
+    timeframe: 'June 2017 - May 2018',
+    websiteUrl: 'https://hoperator.com',
+    title: 'Full Stack Engineer',
+    listItems: [
+      'Developed live chat and messaging software for hotels and hostels.',
+      'Object-oriented and MVC design patterns with JavaScript.',
+      'Developed RESTful backend services in NodeJS and Express.',
+      'Built a scalable realtime chat platform leveraging Socket.IO.',
     ],
   },
 ];
+
+const educationDetails = {
+  organizationName: 'Lindenwood University',
+  timeframe: 'Class of 2017',
+  websiteUrl: 'https://lindenwood.edu',
+  title: 'Computer Science',
+  listItems: [
+    'GPA: 3.6',
+    'Awards / Achievements: Deans List',
+    'My curriculum comprised of courses like Assembly Language Programming, Database Systems, Data Structures and Algorithms, Computer Architecture, Algorithms in Compiler Construction, and UI Design.',
+  ],
+};
 
 const Experience: NextPage = () => {
   return (
@@ -41,12 +53,23 @@ const Experience: NextPage = () => {
         place! I graduated with a degree in Computer Science in 2017, I&apos;ve
         had the opportunity to work at some awesome places since then!
       </p>
-      <Heading level="h2" className="mb-4">
-        Where I&apos;ve Worked
-      </Heading>
-      {jobItems.map((jobItem, index) => (
-        <JobDetails key={`${jobItem.companyName}-${index}`} {...jobItem} />
-      ))}
+      <section className="mb-10">
+        <Heading level="h2" className="mb-4">
+          Where I&apos;ve Worked
+        </Heading>
+        {jobItems.map((jobItem, index) => (
+          <ExperienceDetails
+            key={`${jobItem.organizationName}-${index}`}
+            {...jobItem}
+          />
+        ))}
+      </section>
+      <section>
+        <Heading level="h2" className="mb-4">
+          Education
+        </Heading>
+        <ExperienceDetails {...educationDetails} />
+      </section>
     </DefaultLayout>
   );
 };
