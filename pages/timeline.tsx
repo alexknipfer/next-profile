@@ -160,7 +160,7 @@ const Timeline: NextPage = () => {
         {timelineListItems.map(({ year, timelineItems }) => (
           <div
             key={year}
-            className="border-b border-gray-400 dark:border-gray-500 last:border-0 mb-6 pb-10"
+            className="border-b border-gray-200 dark:border-gray-600 last:border-0 mb-6 pb-10"
           >
             <Heading level="h2" className="mb-4">
               {year}
