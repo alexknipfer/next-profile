@@ -1,0 +1,32 @@
+import Heading from '@/components/heading';
+import List from '@/components/list';
+import Anchor from '@/components/anchor';
+
+interface Props {
+  organizationName: string;
+  timeframe: string;
+  websiteUrl: string;
+  title: string;
+  listItems: string[];
+}
+
+const ExperienceDetails: React.FC<Props> = ({
+  organizationName,
+  timeframe,
+  websiteUrl,
+  title,
+  listItems,
+}) => {
+  return (
+    <div className="border-l border-dashed border-gray-700 dark:border-gray-400 pl-5 mb-10 last:mb-0">
+      <Heading level="h3" className="mb-2">
+        {title}&nbsp;@&nbsp;
+        <Anchor href={websiteUrl}>{organizationName}</Anchor>
+      </Heading>
+      <p className="text-gray-700 dark:text-gray-200 mb-4">{timeframe}</p>
+      <List listItems={listItems} />
+    </div>
+  );
+};
+
+export default ExperienceDetails;

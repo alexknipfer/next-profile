@@ -1,18 +1,7 @@
 import Link from 'next/link';
 import { useTrail, animated } from 'react-spring';
-
-import Overlay from '../overlay';
-
-const navItems = [
-  {
-    path: '/',
-    text: 'Home',
-  },
-  {
-    path: '/timeline',
-    text: 'Timeline',
-  },
-];
+import Overlay from '@/components/overlay';
+import { navItems } from '@/components/nav';
 
 interface Props {
   isOpen: boolean;
@@ -36,7 +25,7 @@ const Menu: React.FC<Props> = ({ isOpen }) => {
           >
             <Link href={navItems[index].path}>
               <a className="text-3xl text-black dark:text-gray-200 uppercase border-l border-solid border-black dark:border-gray-200 pl-4">
-                {navItems[index].text}
+                {navItems[index].name}
               </a>
             </Link>
           </animated.div>

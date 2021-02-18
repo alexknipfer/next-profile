@@ -5,7 +5,7 @@ import ThemeSwitchButton from '@/components/theme-switch-button';
 import MenuIcon from './menu-icon';
 import Menu from './menu';
 
-const navItems = [
+export const navItems = [
   {
     path: '/',
     name: 'Home',
@@ -13,6 +13,10 @@ const navItems = [
   {
     path: '/timeline',
     name: 'Timeline',
+  },
+  {
+    path: '/experience',
+    name: 'Experience',
   },
 ];
 

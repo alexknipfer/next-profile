@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { NextPage } from 'next';
 import DefaultLayout from '@/components/default-layout';
 import Meta from '@/components/meta';
 import Heading from '@/components/heading';
@@ -151,7 +152,7 @@ const timelineListItems: TimelineList[] = [
   },
 ];
 
-const Timeline = () => {
+const Timeline: NextPage = () => {
   return (
     <DefaultLayout>
       <Meta />
@@ -159,7 +160,9 @@ const Timeline = () => {
         <Heading level="h1">Timeline</Heading>
         {timelineListItems.map(({ year, timelineItems }, index) => (
           <Fragment key={year}>
-            <Heading level="h2">{year}</Heading>
+            <Heading level="h2" className="mb-4">
+              {year}
+            </Heading>
             <ul className="list-none">
               {timelineItems.map((item) => (
                 <TimelineStep key={item.name} {...item} />
