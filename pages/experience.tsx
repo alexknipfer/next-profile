@@ -11,7 +11,7 @@ const jobItems = [
     websiteUrl: 'https://ascendum.com',
     title: 'Full Stack Engineer',
     listItems: [
-      'Write performant and maintainable code for multiple internal products and a large diverse set of clients.',
+      'Write performant and maintainable code for multiple internal products and a diverse set of clients.',
       'Work with a variety of technogies and content management systems including, but not limited to, React, Angular, TypeScript, JavaScript, Prismic, and Fastify.',
       'Daily communication with teams of engineers, designers, product owners, and clients.',
       'Provide mentoring to new software engineers.',
