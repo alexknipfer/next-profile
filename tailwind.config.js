@@ -4,6 +4,7 @@ module.exports = {
   darkMode: 'class',
   variants: {
     margin: ['responsive', 'last'],
+    borderWidth: ['last'],
   },
   theme: {
     extend: {
