@@ -11,7 +11,7 @@ const technicalSkills = [
     icon: JavaScriptIcon,
   },
   {
-    name: 'React & React Native',
+    name: 'React',
     icon: ReactIcon,
   },
   {
