@@ -11,22 +11,22 @@ const projects = [
   {
     name: 'Botsai',
     link: 'https://botsai.com',
-    img: '/static/images/projects/botsai_project.png',
+    img: '/static/images/projects/botsai_project.jpg',
   },
   {
     name: 'Ascendum',
     link: 'https://ascendum.com',
-    img: '/static/images/projects/ascendum_project.png',
+    img: '/static/images/projects/ascendum_project.jpg',
   },
   {
     name: 'NPM Slackbot',
     link: 'https://github.com/alexknipfer/npm-bot',
-    img: '/static/images/projects/npm_bot_project.png',
+    img: '/static/images/projects/npm_bot_project.jpg',
   },
   {
     name: 'Wanna see more?',
     link: 'https://github.com/alexknipfer',
-    img: '/static/images/projects/github_project.png',
+    img: '/static/images/projects/github_project.jpg',
   },
 ];
 
