@@ -26,13 +26,13 @@ const ProjectCard: React.FC<Props> = ({ name, link, img }) => {
           },
         )}
       >
-        <div className="bg-black bg-opacity-70 mt-auto rounded-b-md flex items-center flex-col py-3 px-4">
+        <div className="bg-black bg-opacity-70 mt-auto rounded-b-md flex items-center flex-col py-3 px-4 text-center">
           <div className="font-thin text-gray-200">{name}</div>
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400"
+            className="text-blue-400 block w-full truncate"
           >
             {link}
           </a>
@@ -41,8 +41,8 @@ const ProjectCard: React.FC<Props> = ({ name, link, img }) => {
       <NextImage
         src={img}
         alt={`${name} Project`}
-        width={500}
-        height={283}
+        width={400}
+        height={234}
         className="rounded-md"
         priority
       />

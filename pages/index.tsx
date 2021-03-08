@@ -9,6 +9,11 @@ import GitHubIcon from '../public/static/icons/github.svg';
 
 const projects = [
   {
+    name: 'Spotify Dashboard',
+    link: 'https://spotify-dashboard-alexknipfer.vercel.app',
+    img: '/static/images/projects/spotify_project.jpg',
+  },
+  {
     name: 'Botsai',
     link: 'https://botsai.com',
     img: '/static/images/projects/botsai_project.jpg',
@@ -22,11 +27,6 @@ const projects = [
     name: 'NPM Slackbot',
     link: 'https://github.com/alexknipfer/npm-bot',
     img: '/static/images/projects/npm_bot_project.jpg',
-  },
-  {
-    name: 'Wanna see more?',
-    link: 'https://github.com/alexknipfer',
-    img: '/static/images/projects/github_project.jpg',
   },
 ];
 
