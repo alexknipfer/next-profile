@@ -5,11 +5,13 @@ This is v2 of my personal portfolio website. My website has gone through many tr
 ## Running Locally
 
 Install dependencies:
+
 ```bash
 yarn
 ```
 
 Start the development server:
+
 ```bash
 yarn dev
 ```
