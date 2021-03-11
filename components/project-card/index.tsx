@@ -1,6 +1,6 @@
 import NextImage from 'next/image';
-import { useState } from 'react';
 import classNames from 'classnames';
+import useDisclosure from '@/lib/useDisclosure';
 
 interface Props {
   name: string;
@@ -9,20 +9,20 @@ interface Props {
 }
 
 const ProjectCard: React.FC<Props> = ({ name, link, img }) => {
-  const [isOverlayVisible, setOverlayVisible] = useState(false);
+  const { onClose, onOpen, isOpen } = useDisclosure();
 
   return (
     <div
       className="relative rounded-md shadow-xl"
-      onMouseEnter={() => setOverlayVisible(true)}
-      onMouseLeave={() => setOverlayVisible(false)}
+      onMouseEnter={onOpen}
+      onMouseLeave={onClose}
     >
       <div
         className={classNames(
           'absolute top-0 left-0 z-10 w-full h-full flex flex-col justify-items-end transition-opacity duration-200 rounded-md bg-black bg-opacity-40',
           {
-            'opacity-0': !isOverlayVisible,
-            'opacity-100': isOverlayVisible,
+            'opacity-0': !isOpen,
+            'opacity-100': isOpen,
           },
         )}
       >
@@ -33,6 +33,8 @@ const ProjectCard: React.FC<Props> = ({ name, link, img }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400 block w-full truncate"
+            onFocus={onOpen}
+            onBlur={onClose}
           >
             {link}
           </a>
