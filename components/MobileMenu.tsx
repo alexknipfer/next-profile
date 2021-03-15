@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTrail, animated } from 'react-spring';
-import Overlay from '@/components/overlay';
-import { navItems } from '@/components/nav';
+import Overlay from '@/components/Overlay';
+import { navItems } from '@/components/Nav';
 
 interface Props {
   isOpen: boolean;

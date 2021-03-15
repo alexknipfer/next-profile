@@ -1,7 +1,6 @@
 import { useTheme } from 'next-themes';
-
-import MoonIcon from '../../public/static/icons/moon.svg';
-import SunIcon from '../../public/static/icons/sun.svg';
+import MoonIcon from '@/public/static/icons/moon.svg';
+import SunIcon from '@/public/static/icons/sun.svg';
 
 const ThemeSwitchButton: React.FC = () => {
   const { theme, setTheme } = useTheme();

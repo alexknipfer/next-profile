@@ -1,9 +1,9 @@
-import NowPlaying from '../now-playing';
-import LinkedInIcon from '../../public/static/icons/linkedin.svg';
-import TwitterIcon from '../../public/static/icons/twitter.svg';
-import GithubIcon from '../../public/static/icons/github.svg';
-import InstagramIcon from '../../public/static/icons/instagram.svg';
-import EmailIcon from '../../public/static/icons/email.svg';
+import NowPlaying from '@/components/NowPlaying';
+import LinkedInIcon from '@/public/static/icons/linkedin.svg';
+import TwitterIcon from '@/public/static/icons/twitter.svg';
+import GithubIcon from '@/public/static/icons/github.svg';
+import InstagramIcon from '@/public/static/icons/instagram.svg';
+import EmailIcon from '@/public/static/icons/email.svg';
 
 const socialAccounts = [
   {

@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import DefaultLayout from '@/components/default-layout';
-import Meta from '@/components/meta';
-import Heading from '@/components/heading';
-import TimelineStep from '@/components/timeline-step';
+import DefaultLayout from '@/components/DefaultLayout';
+import Meta from '@/components/Meta';
+import Heading from '@/components/Heading';
+import TimelineStep from '@/components/TimelineStep';
 
 interface TimelineList {
   year: number;
