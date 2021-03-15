@@ -9,23 +9,25 @@ const NowPlaying: React.FC = () => {
   const isPlaying = data && data.isPlaying;
 
   return (
-    <div className="relative border border-card-border rounded-md flex items-center w-64 p-3 shadow">
-      {isPlaying ? (
-        <Image
-          src={data.albumImage}
-          width={57}
-          height={57}
-          className="rounded block"
-          alt={`Spotify album cover for ${data.artists}`}
-        />
-      ) : (
-        <Image
-          src="/static/images/spotify.png"
-          width={30}
-          height={30}
-          alt="Spotify music logo"
-        />
-      )}
+    <article className="relative border border-card-border rounded-md flex items-center w-64 p-3 shadow">
+      <div className="flex justify-center items-center h-14">
+        {isPlaying ? (
+          <Image
+            src={data.albumImage}
+            width={55}
+            height={55}
+            className="rounded block"
+            alt={`Spotify album cover for ${data.artists}`}
+          />
+        ) : (
+          <Image
+            src="/static/images/spotify.png"
+            width={30}
+            height={30}
+            alt="Spotify music logo"
+          />
+        )}
+      </div>
       {isPlaying && (
         <img
           src="/static/images/spotify.png"
@@ -52,7 +54,7 @@ const NowPlaying: React.FC = () => {
           {isPlaying ? data.artists : 'Not currently playing'}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
