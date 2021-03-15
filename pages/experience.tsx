@@ -1,8 +1,8 @@
-import DefaultLayout from '@/components/default-layout';
-import Heading from '@/components/heading';
+import DefaultLayout from '@/components/DefaultLayout';
+import Heading from '@/components/Heading';
 import { NextPage } from 'next';
-import Meta from '@/components/meta';
-import ExperienceDetails from '@/components/experience-details';
+import Meta from '@/components/Meta';
+import ExperienceDetails from '@/components/ExperienceDetails';
 
 const jobItems = [
   {

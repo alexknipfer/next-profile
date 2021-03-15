@@ -1,6 +1,6 @@
-import Heading from '@/components/heading';
-import List from '@/components/list';
-import Anchor from '@/components/anchor';
+import Heading from '@/components/Heading';
+import List from '@/components/List';
+import Anchor from '@/components/Anchor';
 
 interface Props {
   organizationName: string;

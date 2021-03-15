@@ -1,7 +1,7 @@
 import { useEffect, Fragment } from 'react';
 import { initGA, logPageView } from '@/lib/analytics';
-import Navigation from '@/components/nav';
-import Footer from '@/components/footer';
+import Navigation from '@/components/Nav';
+import Footer from '@/components/Footer';
 
 const DefaultLayout: React.FC = ({ children }) => {
   useEffect(() => {
