@@ -30,12 +30,9 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "^3.3.11",
     "@fullhuman/postcss-purgecss": "^4.0.2",
-    "apollo-link-prismic": "^1.0.8",
     "autoprefixer": "^10.2.5",
     "classnames": "^2.2.6",
-    "graphql": "^15.5.0",
     "next": "^10.0.8",
     "next-themes": "^0.0.12",
     "postcss-import": "^14.0.0",
