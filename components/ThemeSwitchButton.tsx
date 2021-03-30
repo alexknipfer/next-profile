@@ -5,12 +5,12 @@ import MoonIcon from '../public/static/icons/moon.svg';
 import SunIcon from '../public/static/icons/sun.svg';
 
 const ThemeSwitchButton: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [isMounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
-  const isDarkTheme = theme === 'dark';
+  const isDarkTheme = resolvedTheme === 'dark';
   const DarkModeSwitchIcon = isDarkTheme ? SunIcon : MoonIcon;
 
   return (
