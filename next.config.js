@@ -4,17 +4,13 @@ module.exports = {
       require('./scripts/generate-sitemap');
     }
 
-    config.module.rules.push({
-      test: /\.svg$/,
-      issuer: {
-        test: /\.(js|ts)x?$/,
-      },
-      use: ['@svgr/webpack'],
-    });
-
     return config;
   },
   images: {
     domains: ['images.prismic.io', 'i.scdn.co'],
+  },
+  future: {
+    webpack5: true,
+    strictPostcssConfiguration: true,
   },
 };
