@@ -1,9 +1,9 @@
-import GraphQLIcon from '@/public/static/icons/graphql.svg';
-import ReactIcon from '@/public/static/icons/react.svg';
-import JavaScriptIcon from '@/public/static/icons/javascript.svg';
-import AngularIcon from '@/public/static/icons/angular.svg';
-import NextIcon from '@/public/static/icons/nextjs.svg';
-import NodeIcon from '@/public/static/icons/nodejs.svg';
+import GraphQLIcon from '../public/static/icons/graphql.svg';
+import ReactIcon from '../public/static/icons/react.svg';
+import JavaScriptIcon from '../public/static/icons/javascript.svg';
+import AngularIcon from '../public/static/icons/angular.svg';
+import NextIcon from '../public/static/icons/nextjs.svg';
+import NodeIcon from '../public/static/icons/nodejs.svg';
 
 const technicalSkills = [
   {

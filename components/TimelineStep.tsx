@@ -1,4 +1,4 @@
-import CheckmarkIcon from '@/public/static/icons/checkmark_outline.svg';
+import CheckmarkIcon from '../public/static/icons/checkmark_outline.svg';
 
 interface Props {
   name: string;
