@@ -28,8 +28,7 @@ const socialAccounts = [
     label: "Alex Knipfer's LinkedIn profile",
   },
   {
-    link:
-      'mailto:alexanderknipfer@gmail.com?subject=Reaching out from alexknipfer.com',
+    link: 'mailto:alexanderknipfer@gmail.com?subject=Reaching out from alexknipfer.com',
     icon: EmailIcon,
     label: 'Send email to alexanderknipfer@gmail.com',
   },
