@@ -21,9 +21,10 @@
       "@/lib/*": ["lib/*"],
       "@/interfaces/*": ["interfaces/*"],
       "@/styles/*": ["styles/*"],
-      "@/public/*": ["public/*"]
+      "@/public/*": ["public/*"],
+      "@/test-utils": ["utils/testUtils"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.test.tsx"],
   "exclude": ["node_modules"]
 }
