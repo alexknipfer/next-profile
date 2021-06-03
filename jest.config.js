@@ -1,6 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
-  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+  setupFiles: [require.resolve('whatwg-fetch')],
+  setupFilesAfterEnv: ['<rootDir>/test/setupEnv.ts'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   testEnvironment: 'jsdom',
   globals: {
@@ -10,6 +11,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '@/components/(.*)': '<rootDir>/components/$1',
+    '@/test/(.*)': '<rootDir>/test/$1',
     '@/test-utils': '<rootDir>/utils/testUtils',
   },
   transform: {
