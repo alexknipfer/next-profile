@@ -18,7 +18,7 @@ describe('successful response from now playing', () => {
 
   beforeEach(() => {
     nowPlayingResponse = NowPlayingResponseFactory.build({
-      isPlaying: true,
+      isPlaying: false,
     });
 
     server.use(
