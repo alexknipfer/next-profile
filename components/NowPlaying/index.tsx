@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import useSWR from 'swr';
 
-import { NowPlayingResponse } from '../pages/api/now-playing';
+import { NowPlayingResponse } from '../../pages/api/now-playing';
 
 const NowPlaying: React.FC = () => {
   const { data } = useSWR<NowPlayingResponse>('/api/now-playing');
