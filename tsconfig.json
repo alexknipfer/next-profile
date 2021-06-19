@@ -23,7 +23,8 @@
       "@/styles/*": ["styles/*"],
       "@/public/*": ["public/*"],
       "@/test/*": ["test/*"],
-      "@/test-utils": ["utils/testUtils"]
+      "@/test-utils": ["utils/testUtils"],
+      "@/serializers/*": ["serializers/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.test.tsx"],
