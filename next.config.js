@@ -10,7 +10,6 @@ module.exports = {
     domains: ['images.prismic.io', 'i.scdn.co'],
   },
   future: {
-    webpack5: true,
     strictPostcssConfiguration: true,
   },
 };
