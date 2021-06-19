@@ -1,6 +1,7 @@
 import { NextApiResponse, NextApiRequest } from 'next';
 import { SpotifyNowPlayingResponse } from '@/interfaces/Spotify';
 import { getNowPlayingTrack } from '@/lib/spotify';
+import { serialize } from 'serializers/nowPlayingSerializer';
 
 export interface NowPlayingResponse {
   isPlaying: boolean;
@@ -28,23 +29,7 @@ export default async (
     });
   }
 
-  const songDetails: SpotifyNowPlayingResponse = await response.json();
+  const nowPlayingResponse: SpotifyNowPlayingResponse = await response.json();
 
-  const isPlaying = songDetails.is_playing;
-  const songName = songDetails.item.name;
-  const artists = songDetails.item.artists
-    .map((artist) => artist.name)
-    .join(', ');
-  const album = songDetails.item.album.name;
-  const albumImage = songDetails.item.album.images[0].url;
-  const songUrl = songDetails.item.external_urls.spotify;
-
-  return res.status(200).json({
-    isPlaying,
-    songName,
-    artists,
-    album,
-    albumImage,
-    songUrl,
-  });
+  return res.status(200).json(serialize(nowPlayingResponse));
 };
