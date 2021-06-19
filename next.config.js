@@ -7,10 +7,9 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['images.prismic.io', 'i.scdn.co'],
+    domains: ['i.scdn.co'],
   },
   future: {
-    webpack5: true,
     strictPostcssConfiguration: true,
   },
 };
