@@ -10,14 +10,9 @@ export interface SpotifyNowPlayingResponse {
   timestamp: number;
   context: Context;
   progress_ms: number;
-  item: Item;
+  item: SpotifySong;
   currently_playing_type: string;
-  actions: Actions;
   is_playing: boolean;
-}
-
-export interface Actions {
-  disallows: Disallows;
 }
 
 export interface Disallows {
@@ -35,9 +30,9 @@ export interface ExternalUrls {
   spotify: string;
 }
 
-export interface Item {
-  album: Album;
-  artists: Artist[];
+export interface SpotifySong {
+  album: SpotifyAlbum;
+  artists: SpotifyArtist[];
   available_markets: any[];
   disc_number: number;
   duration_ms: number;
@@ -51,20 +46,19 @@ export interface Item {
   name: string;
   popularity: number;
   preview_url: null;
-  restrictions: Restrictions;
   track_number: number;
   type: string;
   uri: string;
 }
 
-export interface Album {
+export interface SpotifyAlbum {
   album_type: string;
-  artists: Artist[];
+  artists: SpotifyArtist[];
   available_markets: any[];
   external_urls: ExternalUrls;
   href: string;
   id: string;
-  images: Image[];
+  images: SpotifyImage[];
   name: string;
   release_date: string;
   release_date_precision: string;
@@ -73,7 +67,7 @@ export interface Album {
   uri: string;
 }
 
-export interface Artist {
+export interface SpotifyArtist {
   external_urls: ExternalUrls;
   href: string;
   id: string;
@@ -82,7 +76,7 @@ export interface Artist {
   uri: string;
 }
 
-export interface Image {
+export interface SpotifyImage {
   height: number;
   url: string;
   width: number;
@@ -90,8 +84,4 @@ export interface Image {
 
 export interface ExternalIDS {
   isrc: string;
-}
-
-export interface Restrictions {
-  reason: string;
 }
